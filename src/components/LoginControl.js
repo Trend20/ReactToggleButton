@@ -6,6 +6,8 @@ import Greetings from './Greetings';
 class LoginControl extends Component{
     constructor(props){
         super(props);
+        this.handleLoginClick = this.handleLoginClick.bind(this);
+        this.handleLogoutClick = this.handleLogoutClick.bind(this);
         this.state={
             isLoggedIn: false,
         };
@@ -19,7 +21,7 @@ class LoginControl extends Component{
 
     handleLogoutClick(){
         this.setState({
-            isLoggedIn: true
+            isLoggedIn: false
         });
     }
 
